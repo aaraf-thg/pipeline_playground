@@ -1,0 +1,36 @@
+name: CI Pipeline with Auto Tagging
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checkout the code from the repository
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+
+      # Generate a tag for the commit and push it
+      - name: Auto tag
+        if: github.ref == 'refs/heads/main'
+        run: |
+          # Get the latest commit hash and short hash
+          COMMIT_HASH=$(git rev-parse HEAD)
+          SHORT_HASH=$(git rev-parse --short HEAD)
+          
+          # Define the tag (you can customize this format)
+          TAG="v1.0.${{ github.run_number }}-${SHORT_HASH}"
+          
+          # Create the tag
+          git tag $TAG
+
+          # Push the tag to the repository
+          git push origin $TAG
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
