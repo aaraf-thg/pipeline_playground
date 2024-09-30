@@ -16,6 +16,31 @@ jobs:
         with:
             fetch-depth: 0
 
+      - name: Delete Tags
+        run: |
+          git fetch --all --tags
+          NOW=$(date +%s)
+
+          # Get all tags and their commit dates
+          for TAG in $(git tag); do
+            # Get the commit date (in seconds since the epoch) for the tag
+            TAG_COMMIT_DATE=$(git log -1 --format=%ct "$TAG")
+            
+            # Calculate the age of the tag (in seconds)
+            AGE=$((NOW - TAG_COMMIT_DATE))
+
+            # If the tag is older than 600 seconds (10 minutes)
+            if [ "$AGE" -gt 600 ]; then
+              echo "Deleting tag: $TAG (Age: $((AGE / 60)) minutes)"
+
+              # Delete the tag locally and remotely
+              git tag -d "$TAG" || echo "Tag $TAG not found locally"
+              git push --delete origin "$TAG" || echo "Tag $TAG not found remotely"
+            else
+              echo "Skipping tag: $TAG (Age: $((AGE / 60)) minutes)"
+            fi
+          done
+
 
       # Generate a tag for the commit and push it
       - name: Auto tag
