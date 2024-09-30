@@ -16,29 +16,6 @@ jobs:
         with:
             fetch-depth: 0
 
-      - name: Delete Tags
-        run: |
-          # Get current date in seconds since the epoch
-          current_date=$(date +%s)
-
-          # 10 minutes in seconds
-          ten_minutes=$((10 * 60))
-
-          # Get all tags with their commit date and delete if older than 10 minutes
-          for tag in $(git for-each-ref --sort=creatordate --format '%(refname:short) %(creatordate:unix)' refs/tags); do
-            tag_name=$(echo "$tag" | awk '{print $1}')
-            tag_date=$(echo "$tag" | awk '{print $2}')
-            # Calculate the age of the tag in seconds
-            tag_age=$((current_date - tag_date))
-
-            # If tag is older than 10 minutes, delete it locally and from the remote
-            if [ $tag_age -gt $ten_minutes ]; then
-              echo "Deleting tag: $tag_name"
-              git tag -d "$tag_name"
-              git push --delete origin "$tag_name"
-            fi
-          done
-
 
       # Generate a tag for the commit and push it
       - name: Auto tag
