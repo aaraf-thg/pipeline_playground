@@ -28,9 +28,11 @@ jobs:
             
             # Calculate the age of the tag (in seconds)
             AGE=$((NOW - TAG_COMMIT_DATE))
-
+            threshold=600
+            # for 6 months instead of 10 mins
+            # threshold=15,552,000
             # If the tag is older than 600 seconds (10 minutes)
-            if [ "$AGE" -gt 600 ]; then
+            if [ "$AGE" -gt "$threshold" ]; then
               echo "Deleting tag: $TAG (Age: $((AGE / 60)) minutes)"
 
               # Delete the tag locally and remotely
