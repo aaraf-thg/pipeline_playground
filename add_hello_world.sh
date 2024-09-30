@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Define the Python script file path
-PYTHON_FILE="hellorld.py"
+PYTHON_FILE="helloworld.py"
 
 # Append another print statement to the Python script
 echo 'print("hello world")' >> $PYTHON_FILE
