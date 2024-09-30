@@ -4,5 +4,6 @@
   "main": "index.js",
   "scripts": {
     "build": "echo Building package bar"
-  }
+  },
+  "gitHead": "86b6351658bb2cf5a318fc35adb25a818a00aa66"
 }
