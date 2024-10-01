@@ -65,6 +65,8 @@ jobs:
         run: |
          npm config set registry https://npm.pkg.github.com
          npm set "//npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}"
+         npm whoami --scope=THG-Commerce --registry=https://npm.pkg.github.com
+         echo -e "registry=https://npm.pkg.github.com/\n//npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}" > ~/.npmrc
          git config user.name "${{ github.actor }}"
          git config user.email "${{ github.actor}}@users.noreply.github.com"
 
