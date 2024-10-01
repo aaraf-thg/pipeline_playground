@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.3.3 (2024-10-01)
+
+
+
+## 1.0.54-45695be (2024-10-01)
+
+
+### Bug Fixes
+
+* url friendly character ([45695be](https://github.com/aaraf-thg/pipeline_playground/commit/45695bec9758130b5cd55c13a080fb24021e97ad))
+
+
+
+
+
 ## 1.3.2 (2024-10-01)
 
 
