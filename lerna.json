@@ -3,7 +3,9 @@
     "packages/*"
   ],
   "version": "independent",
-  "command": {
+  "npmClient": "npm",
+  "useWorkspaces": true, 
+ "command": {
     "version": {
       "allowBranch": ["main"],
       "message": "ci(release): published new version [skip ci]"

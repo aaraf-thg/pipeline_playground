@@ -1,6 +1,6 @@
 {
-  "name": "bar",
   "version": "1.5.2",
+  "name": "aaraf-thg/bar",
   "main": "index.js",
   "scripts": {
     "build": "echo Building package bar"
