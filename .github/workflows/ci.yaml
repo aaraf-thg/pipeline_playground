@@ -104,6 +104,7 @@ jobs:
       - name: Empty the file
         run: |
           > changes.txt  # This command will empty the file
+          cat changes.txt
 
       # Step 4: Re-upload the updated artifact with the empty file
       - name: Upload updated artifact
