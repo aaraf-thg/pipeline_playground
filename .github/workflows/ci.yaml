@@ -13,7 +13,6 @@ jobs:
       contents: write
 
     steps:
-      # Checkout the code from the repository
       - name: Checkout code
         uses: actions/checkout@v3
 
