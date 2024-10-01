@@ -83,6 +83,27 @@ jobs:
           name: changes
           path: changes.txt
 
-  review:
-     uses: ./.github/workflows/changes.yaml
-     needs: build
+  empty-file:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Checkout code
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # Step 2: Download the artifact
+      - name: Download artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: changes
+      # Step 3: Empty the file (Assume we are emptying `file.txt` inside the artifact)
+      - name: Empty the file
+        run: |
+          > changes.txt  # This command will empty the file
+
+      # Step 4: Re-upload the updated artifact with the empty file
+      - name: Upload updated artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: changes  # Replace with your artifact name
+          path: changes.txt  # Re-upload the empty file
