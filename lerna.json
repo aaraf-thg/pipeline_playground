@@ -4,8 +4,7 @@
   ],
   "version": "independent",
   "npmClient": "npm",
-  "useWorkspaces": true, 
- "command": {
+  "command": {
     "version": {
       "allowBranch": ["main"],
       "message": "ci(release): published new version [skip ci]"
