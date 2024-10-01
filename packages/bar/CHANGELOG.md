@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.8.1 (2024-10-01)
+
+
+
+## 1.0.71-9a3a331 (2024-10-01)
+
+
+### Bug Fixes
+
+* Update changes.yaml ([9a3a331](https://github.com/aaraf-thg/pipeline_playground/commit/9a3a33177562df69de70430f29e94f871baceb62))
+
+
+
+
+
 # 1.8.0 (2024-10-01)
 
 
