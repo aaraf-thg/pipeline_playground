@@ -83,8 +83,13 @@ jobs:
           name: changes
           path: changes.txt
 
+  review:
+     uses: ./.github/workflows/changes.yaml
+     needs: build
+
   empty-file:
     runs-on: ubuntu-latest
+    needs: review
 
     steps:
       # Step 1: Checkout code
