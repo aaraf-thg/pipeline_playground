@@ -1,6 +1,6 @@
 {
   "version": "1.3.2",
-  "name": "aaraf-thg/foo",
+  "name": "@aaraf-thg/foo",
   "main": "index.js",
   "scripts": {
     "build": "echo Building package foo"
