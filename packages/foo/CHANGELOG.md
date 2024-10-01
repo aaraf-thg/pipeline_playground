@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.5.3 (2024-10-01)
+
+
+
+## 1.0.62-f30a3dc (2024-10-01)
+
+
+### Bug Fixes
+
+* Update changes.yaml ([f30a3dc](https://github.com/aaraf-thg/pipeline_playground/commit/f30a3dc70d58089bd003d48fc8b4df3516fe5a23))
+
+
+
+
+
 ## 1.5.2 (2024-10-01)
 
 
