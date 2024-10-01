@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.8.0 (2024-10-01)
+
+
+
+## 1.0.68-50f2b70 (2024-10-01)
+
+
+### Features
+
+* update ci ([50f2b70](https://github.com/aaraf-thg/pipeline_playground/commit/50f2b705ce2b0b6445431702d267f4b170fd7b9a))
+
+
+
+
+
 ## 1.7.7 (2024-10-01)
 
 
