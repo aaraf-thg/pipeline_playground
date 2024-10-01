@@ -1,6 +1,6 @@
 {
   "name": "foo",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "main": "index.js",
   "scripts": {
     "build": "echo Building package foo"
