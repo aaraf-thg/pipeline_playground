@@ -84,13 +84,5 @@ jobs:
           path: changes.txt
 
   review:
-     runs-on: ubuntu-latest
+     uses: ./.github/workflows/changes.yaml
      needs: build
-     steps:
-      - name: Download changes.txt
-        uses: actions/download-artifact@v3
-        with:
-          name: changes
-
-      - name: Display changes.txt
-        run: cat changes.txt
