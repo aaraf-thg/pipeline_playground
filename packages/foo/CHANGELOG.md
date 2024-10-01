@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.1.4 (2024-10-01)
+
+
+
+## 1.0.46-7e55d5b (2024-10-01)
+
+**Note:** Version bump only for package foo
+
+
+
+
+
 ## 1.1.3 (2024-10-01)
 
 
