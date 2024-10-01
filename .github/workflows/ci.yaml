@@ -77,3 +77,20 @@ jobs:
          lerna publish --concurrency 1 --conventional-commits --no-commit-hooks --yes > changes.txt
          cat changes.txt
 
+      - name: Upload changes.txt
+        uses: actions/upload-artifact@v3
+        with:
+          name: changes
+          path: changes.txt
+
+  review:
+     runs-on: ubuntu-latest
+     needs: build
+     steps:
+      - name: Download changes.txt
+        uses: actions/download-artifact@v3
+        with:
+          name: changes
+
+      - name: Display changes.txt
+        run: cat changes.txt
