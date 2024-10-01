@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.3.0](https://github.com/aaraf-thg/pipeline_playground/compare/bar@1.2.2...bar@1.3.0) (2024-10-01)
+
+
+### Features
+
+* update index.js ([adc5472](https://github.com/aaraf-thg/pipeline_playground/commit/adc5472e08cb0cada7e7c0febf6de7d985257ee8))
+
+
+
+
+
 ## 1.2.2 (2024-10-01)
 
 
