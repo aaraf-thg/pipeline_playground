@@ -74,7 +74,7 @@ jobs:
 
       - name: Lerna Publish
         run: |
-         lerna publish --concurrency 1 --conventional-commits --no-commit-hooks --yes > changes.txt
+         lerna publish --conventional-commits --no-commit-hooks --yes > changes.txt
          cat changes.txt
 
       - name: Upload changes.txt
