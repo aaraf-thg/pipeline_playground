@@ -30,4 +30,8 @@ jobs:
           
           # Output the filtered paths to an environment variable
           echo "filtered_paths=$FILTERED_PATHS" >> $GITHUB_ENV
-          echo "Filtered paths: ${{ env.filtered_paths }}"
+          echo $FILTERED_PATHS
+          
+      - name: Check Changed Files
+        run: |
+         echo "Filtered Paths: ${{ env.filtered_paths }}"
