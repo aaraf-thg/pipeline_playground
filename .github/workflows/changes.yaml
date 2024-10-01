@@ -13,6 +13,7 @@ jobs:
           name: changes
       - name: Get Changed Paths
         run: |
+          cat changes.txt
           # Define the paths you want to filter
            PATHS=("foo" "bar")
            # Initialize a variable to store valid paths
