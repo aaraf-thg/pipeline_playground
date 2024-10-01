@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.9.7 (2024-10-01)
+
+
+
+## 1.0.83-08e9557 (2024-10-01)
+
+**Note:** Version bump only for package @aaraf-thg/bar
+
+
+
+
+
 ## 1.9.6 (2024-10-01)
 
 
