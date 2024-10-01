@@ -21,7 +21,7 @@ jobs:
            # Loop through the paths and apply your custom filtering logic
            for path in "${PATHS[@]}"; do
              # check if path is in the lerna publish output
-             count=$(grep "$path" $1| wc -l)
+             count=$(grep "$path" changes.txt| wc -l)
             if [[ "$count" -gt 1 ]]; then
               echo "Including $path"
               FILTERED_PATHS+="$path/**/* "
