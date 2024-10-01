@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 1.2.1 (2024-10-01)
+
+
+
+## 1.0.43-3d5df45 (2024-10-01)
+
+
+### Bug Fixes
+
+* Update ci.yaml ([3d5df45](https://github.com/aaraf-thg/pipeline_playground/commit/3d5df452596410cfc05fb19fd5cd70d56899b6c2))
+
+
+
+
+
 # [1.2.0](https://github.com/aaraf-thg/pipeline_playground/compare/bar@1.1.0...bar@1.2.0) (2024-10-01)
 
 
