@@ -62,5 +62,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Lerna Publish
+        run: |
          lerna publish --concurrency 1 --conventional-commits --no-commit-hooks --yes > changes.txt
 
