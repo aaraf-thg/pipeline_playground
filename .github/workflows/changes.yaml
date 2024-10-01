@@ -11,5 +11,22 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: changes
-      - name: Display changes.txt
-        run: cat changes.txt
+      - name: Get Changed Paths
+        run: |
+          # Define the paths you want to filter
+           PATHS=("foo" "bar")
+           # Initialize a variable to store valid paths
+           FILTERED_PATHS=""
+          
+           # Loop through the paths and apply your custom filtering logic
+           for path in "${PATHS[@]}"; do
+             # check if path is in the lerna publish output
+             count=$(grep "$path" $1| wc -l)
+            if [[ "$count" -gt 1 ]]; then
+              echo "Including $path"
+              FILTERED_PATHS+="$path/**/* "
+            fi
+          done
+          
+          # Output the filtered paths to an environment variable
+          echo "filtered_paths=$FILTERED_PATHS" >> $GITHUB_ENV
