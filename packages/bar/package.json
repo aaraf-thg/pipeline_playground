@@ -5,5 +5,5 @@
   "scripts": {
     "build": "echo Building package bar"
   },
-  "gitHead": "39884e7b9b77636d9492acd826521ff8a683a813"
+  "gitHead": "d065e9a83bdd070e34ff08a3de59c368869b0ac3"
 }
