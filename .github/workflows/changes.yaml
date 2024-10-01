@@ -30,4 +30,4 @@ jobs:
           
           # Output the filtered paths to an environment variable
           echo "filtered_paths=$FILTERED_PATHS" >> $GITHUB_ENV
-	  cat $GITHUB_ENV
+          cat $GITHUB_ENV
