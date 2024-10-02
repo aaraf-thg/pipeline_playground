@@ -72,9 +72,6 @@ jobs:
          git config user.email "${{ github.actor}}@users.noreply.github.com"
       - name: Lerna Publish
         run: |
-         lerna version --conventional-commits --no-commit-hooks --no-git-tag-version --yes > changes.txt
-         echo "version changes below"
-         cat changes.txt
          lerna publish --conventional-commits --no-commit-hooks --no-git-tag-version --no-push --yes > changes.txt
          echo "changes below"
          cat changes.txt
