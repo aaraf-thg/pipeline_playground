@@ -2,3 +2,4 @@ node_modules/
 *.txt
 path_filter.sh
 
+dry.sh
