@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.9.11](https://github.com/aaraf-thg/pipeline_playground/compare/@aaraf-thg/bar@1.9.10...@aaraf-thg/bar@1.9.11) (2024-10-02)
+
+**Note:** Version bump only for package @aaraf-thg/bar
+
+
+
+
+
 ## 1.9.10 (2024-10-02)
 
 
