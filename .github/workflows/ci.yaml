@@ -16,52 +16,52 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Delete Tags
-        run: |
-          git fetch --all --tags
-          NOW=$(date +%s)
-
-          # Get all tags and their commit dates
-          for TAG in $(git tag); do
-            # Get the commit date (in seconds since the epoch) for the tag
-            TAG_COMMIT_DATE=$(git log -1 --format=%ct "$TAG")
-            
-            # Calculate the age of the tag (in seconds)
-            AGE=$((NOW - TAG_COMMIT_DATE))
-            threshold=600
-            # for 6 months instead of 10 mins
-            # threshold=15,552,000
-            # If the tag is older than 600 seconds (10 minutes)
-            if [ "$AGE" -gt "$threshold" ]; then
-              echo "Deleting tag: $TAG (Age: $((AGE / 60)) minutes)"
-
-              # Delete the tag locally and remotely
-              git tag -d "$TAG" || echo "Tag $TAG not found locally"
-              git push --delete origin "$TAG" || echo "Tag $TAG not found remotely"
-            else
-              echo "Skipping tag: $TAG (Age: $((AGE / 60)) minutes)"
-            fi
-          done
-
-
-      # Generate a tag for the commit and push it
-      - name: Auto tag
-        if: github.ref == 'refs/heads/main'
-        run: |
-          # Get the latest commit hash and short hash
-          COMMIT_HASH=$(git rev-parse HEAD)
-          SHORT_HASH=$(git rev-parse --short HEAD)
-          
-          # Define the tag (you can customize this format)
-          TAG="v1.0.${{ github.run_number }}-${SHORT_HASH}"
-          
-          # Create the tag
-          git tag $TAG
-
-          # Push the tag to the repository
-          git push origin $TAG
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+#      - name: Delete Tags
+#        run: |
+#          git fetch --all --tags
+#          NOW=$(date +%s)
+#
+#          # Get all tags and their commit dates
+#          for TAG in $(git tag); do
+#            # Get the commit date (in seconds since the epoch) for the tag
+#            TAG_COMMIT_DATE=$(git log -1 --format=%ct "$TAG")
+#            
+#            # Calculate the age of the tag (in seconds)
+#            AGE=$((NOW - TAG_COMMIT_DATE))
+#            threshold=600
+#            # for 6 months instead of 10 mins
+#            # threshold=15,552,000
+#            # If the tag is older than 600 seconds (10 minutes)
+#            if [ "$AGE" -gt "$threshold" ]; then
+#              echo "Deleting tag: $TAG (Age: $((AGE / 60)) minutes)"
+#
+#              # Delete the tag locally and remotely
+#              git tag -d "$TAG" || echo "Tag $TAG not found locally"
+#              git push --delete origin "$TAG" || echo "Tag $TAG not found remotely"
+#            else
+#              echo "Skipping tag: $TAG (Age: $((AGE / 60)) minutes)"
+#            fi
+#          done
+#
+#
+#      # Generate a tag for the commit and push it
+#      - name: Auto tag
+#        if: github.ref == 'refs/heads/main'
+#        run: |
+#          # Get the latest commit hash and short hash
+#          COMMIT_HASH=$(git rev-parse HEAD)
+#          SHORT_HASH=$(git rev-parse --short HEAD)
+#          
+#          # Define the tag (you can customize this format)
+#          TAG="v1.0.${{ github.run_number }}-${SHORT_HASH}"
+#          
+#          # Create the tag
+#          git tag $TAG
+#
+#          # Push the tag to the repository
+#          git push origin $TAG
+#        env:
+#          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Setup Git
         run: |
@@ -73,7 +73,7 @@ jobs:
 
       - name: Lerna Publish
         run: |
-         lerna publish --conventional-commits --no-commit-hooks --no-git-tag-version --yes > changes.txt
+         lerna publish --conventional-commits --no-commit-hooks --no-git-tag-version --no-push --yes > changes.txt
          cat changes.txt
 
       - name: Upload changes.txt
