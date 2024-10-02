@@ -74,6 +74,7 @@ jobs:
       - name: Lerna Publish
         run: |
          lerna publish --conventional-commits --no-commit-hooks --no-git-tag-version --no-push --yes > changes.txt
+         echo "changes below"
          cat changes.txt
 
       - name: Upload changes.txt
