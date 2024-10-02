@@ -71,9 +71,9 @@ jobs:
          git config user.name "${{ github.actor }}"
          git config user.email "${{ github.actor}}@users.noreply.github.com"
       - name: Download previous artifact
-          uses: actions/download-artifact@v3
-          with:
-            name: changes
+        uses: actions/download-artifact@v3
+        with:
+          name: changes
       - name: Lerna Publish
         run: |
          echo "changes before"
