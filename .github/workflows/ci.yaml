@@ -73,7 +73,7 @@ jobs:
 
       - name: Lerna Publish
         run: |
-         lerna publish --conventional-commits --no-commit-hooks --yes > changes.txt
+         lerna publish --conventional-commits --no-commit-hooks --no-git-tag-version --yes > changes.txt
          cat changes.txt
 
       - name: Upload changes.txt
