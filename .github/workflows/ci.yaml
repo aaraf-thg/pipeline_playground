@@ -70,10 +70,6 @@ jobs:
          echo -e "registry=https://npm.pkg.github.com/\n//npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}" > ~/.npmrc
          git config user.name "${{ github.actor }}"
          git config user.email "${{ github.actor}}@users.noreply.github.com"
-      - name: Download previous artifact
-        uses: actions/download-artifact@v3
-        with:
-          name: changes
       - name: Lerna Publish
         run: |
          lerna version --conventional-commits --no-commit-hooks --no-git-tag-version --yes > changes.txt
