@@ -5,6 +5,9 @@
   "version": "independent",
   "npmClient": "npm",
   "command": {
+    "publish": {
+      "conventionalCommits": true
+    },
     "version": {
       "allowBranch": ["main"],
       "message": "ci(release): published new version [skip ci]"
