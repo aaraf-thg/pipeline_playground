@@ -1,5 +1,5 @@
 {
-  "version": "1.9.11",
+  "version": "1.10.0",
   "name": "@aaraf-thg/bar",
   "main": "index.js",
   "scripts": {

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.8.0](https://github.com/aaraf-thg/pipeline_playground/compare/@aaraf-thg/foo@1.7.11...@aaraf-thg/foo@1.8.0) (2024-10-02)
+
+
+### Features
+
+* afgadf ([834e22b](https://github.com/aaraf-thg/pipeline_playground/commit/834e22bdac52c299fcdbb24c35941e07b9afdfab))
+
+
+
+
+
 ## [1.7.11](https://github.com/aaraf-thg/pipeline_playground/compare/@aaraf-thg/foo@1.7.10...@aaraf-thg/foo@1.7.11) (2024-10-02)
 
 **Note:** Version bump only for package @aaraf-thg/foo

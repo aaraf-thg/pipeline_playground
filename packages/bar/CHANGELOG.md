@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.10.0](https://github.com/aaraf-thg/pipeline_playground/compare/@aaraf-thg/bar@1.9.11...@aaraf-thg/bar@1.10.0) (2024-10-02)
+
+
+### Features
+
+* afgadf ([834e22b](https://github.com/aaraf-thg/pipeline_playground/commit/834e22bdac52c299fcdbb24c35941e07b9afdfab))
+
+
+
+
+
 ## [1.9.11](https://github.com/aaraf-thg/pipeline_playground/compare/@aaraf-thg/bar@1.9.10...@aaraf-thg/bar@1.9.11) (2024-10-02)
 
 **Note:** Version bump only for package @aaraf-thg/bar
