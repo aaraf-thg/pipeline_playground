@@ -76,7 +76,8 @@ jobs:
           name: changes
       - name: Lerna Publish
         run: |
-         echo "changes before"
+         lerna version --conventional-commits --no-commit-hooks --no-git-tag-version --yes > changes.txt
+         echo "version changes below"
          cat changes.txt
          lerna publish --conventional-commits --no-commit-hooks --no-git-tag-version --no-push --yes > changes.txt
          echo "changes below"
