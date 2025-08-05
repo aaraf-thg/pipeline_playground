@@ -1,0 +1,16 @@
+name: test issue_comment
+
+on:
+  issue_comment:
+    types:
+      - created 
+
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    if: github.event_name != 'issue_comment' || (github.event.issue.pull_request && github.event.comment.body == '/test')
+    steps:
+      - name: run a step
+        run: |
+          echo "hello word"
