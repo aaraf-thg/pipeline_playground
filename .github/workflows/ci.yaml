@@ -13,6 +13,10 @@ jobs:
       contents: write
 
     steps:
+      - name: check ref name
+        run: |
+          echo "${{ github.ref_name }}" 
+
       - name: Checkout code
         uses: actions/checkout@v3
 
