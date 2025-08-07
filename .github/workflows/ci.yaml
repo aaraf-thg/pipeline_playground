@@ -8,9 +8,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    permissions:
-      packages: write
-      contents: write
+     if: github.event_name == 'push' && github.ref_name == 'main'
 
     steps:
       - name: check ref name
